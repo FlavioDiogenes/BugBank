@@ -29,6 +29,10 @@ Após clonar o repositório, execute o comando abaixo para instalar as dependên
 npm install
 ```
 
+```bash
+npx playwright install
+```
+
 ## Como executar os testes
 
 Para executar todos os testes automatizados:
