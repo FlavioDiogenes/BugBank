@@ -81,14 +81,16 @@ npx playwright show-report
 
 ```bash
 PlayWrightAutomation/
+├── .github/workflows/
+│   ├── playwright.yml
 ├── tests/
-│   ├── Login.spec.js
-│   └── Cadastro.spec.js
-├── package.json
-├── package-lock.json
-├── playwright.config.js
+│   ├── Cadastro.spec.js
+│   └── Login.spec.js
+├── .gitgnore
 ├── README.md
-└── .gitignore
+├── package-lock.json
+├── package.json
+└── playwright.config.js
 ```
 
 ## Casos automatizados
