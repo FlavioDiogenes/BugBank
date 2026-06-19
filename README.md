@@ -84,7 +84,7 @@ PlayWrightAutomation/
 ├── .github/workflows/
 │   ├── playwright.yml
 ├── docs/
-│   ├── plano-de-teste-e-relatório
+│   ├── plano-de-teste-e-relatório-de-bugs.pdf
 ├── tests/
 │   ├── Cadastro.spec.js
 │   └── Login.spec.js
