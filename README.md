@@ -129,4 +129,3 @@ O plano de teste e relatório de bugs utilizado como base para os testes automat
 
 - Alguns testes automatizados podem falhar porque a aplicação BugBank apresenta comportamentos divergentes dos resultados esperados definidos no plano de teste. Essas falhas estão documentadas no relatório de bugs disponível na pasta `docs`.
 - Os testes utilizam dados dinâmicos para criação de usuários, evitando conflito com e-mails já cadastrados.
-- As pastas `node_modules`, `playwright-report` e `test-results` não devem ser versionadas, pois são geradas automaticamente.
