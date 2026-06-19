@@ -66,22 +66,19 @@ test.describe('Cadastro - BugBank', () => {
         await expect(page.getByText(/senha fraca|senha é fraca|senha inválida/i)).toBeVisible();
 
     });
-    test('BBQA-9 - Cadastro com campos vazios', async ({page}) =>{
+    test('BBQA-9 - Cadastro com campos vazios', async ({ page }) => {
         await page.goto(BASE_URL);
 
         await page.getByRole('button', { name: 'Registrar' }).click();
-        
+
         const cadastro = page.locator('.card__register');
 
-        await cadastro.getByPlaceholder('Informe seu e-mail').fill(' ');
-        await cadastro.getByPlaceholder('Informe seu Nome').fill(' ');
-        await cadastro.getByPlaceholder('Informe sua senha').fill(' ');
-        await cadastro.getByPlaceholder('Informe a confirmação da senha').fill(' ');
+        await cadastro.getByRole('button', { name: 'Cadastrar' }).click();
 
-        await expect(cadastro.getByText(/É campo obrigatório/)).toHaveCount(4);
+        await expect(cadastro.getByText(/É campo obrigatório/i)).toHaveCount(4);
         await expect(page.getByText(/criada com sucesso/i)).not.toBeVisible();
-
     });
+    
     test('BBQA-10 - Cadastro com usuário já existente', async ({page}) => {
         await page.goto(BASE_URL);
 
