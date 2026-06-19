@@ -69,6 +69,10 @@ Também é possível utilizar a extensão oficial do Playwright no VS Code para 
 Playwright Test for VSCode
 ```
 
+4. Instale a extensão oficial da Microsoft.
+
+A extensão é opcional. Os testes também podem ser executados normalmente pelo terminal.
+
 ## Como visualizar o relatório dos testes
 
 Após a execução dos testes, utilize:
@@ -80,20 +84,22 @@ npx playwright show-report
 ## Estrutura do projeto
 
 ```bash
-PlayWrightAutomation/
-├── .github/workflows/
-│   ├── playwright.yml
+bugbank-test-automation/
+├── .github/
+│   └── workflows/
+│       └── playwright.yml
 ├── docs/
-│   ├── plano-de-teste-e-relatório-de-bugs.pdf
+│   └── plano-de-teste-e-relatorio-de-bugs.pdf
 ├── tests/
 │   ├── Cadastro.spec.js
 │   └── Login.spec.js
-├── .gitgnore
+├── .gitignore
 ├── README.md
 ├── package-lock.json
 ├── package.json
 └── playwright.config.js
 ```
+
 ## Documentação
 
 O plano de teste e relatório de bugs utilizado como base para os testes automatizados está disponível em:
@@ -105,18 +111,22 @@ O plano de teste e relatório de bugs utilizado como base para os testes automat
 
 ### Login
 
-- CT-1 - Login com dados válidos
-- CT-2 - Login com e-mail inválido
-- CT-3 - Login com senha incorreta
-- CT-4 - Login com campos vazios
-- CT-5 - Login com espaços em branco
+- CT.01 - Login com dados válidos
+- CT.02 - Login com e-mail inválido
+- CT.03 - Login com senha incorreta
+- CT.04 - Login com campos vazios
+- CT.05 - Login com espaços em branco
 
 ### Cadastro
 
-- CT-6 - Cadastro com dados válidos
-- Demais casos de cadastro conforme plano de testes no Qase
+- CT.06 - Cadastro com dados válidos
+- CT.07 - Cadastro com e-mail inválido
+- CT.08 - Cadastro com senha fraca
+- CT.09 - Cadastro com campos vazios
+- CT.10 - Cadastro com usuário já existente
 
 ## Observações
 
 - Alguns testes automatizados podem falhar porque a aplicação BugBank apresenta comportamentos divergentes dos resultados esperados definidos no plano de teste. Essas falhas estão documentadas no relatório de bugs disponível na pasta `docs`.
 - Os testes utilizam dados dinâmicos para criação de usuários, evitando conflito com e-mails já cadastrados.
+- As pastas `node_modules`, `playwright-report` e `test-results` não devem ser versionadas, pois são geradas automaticamente.
