@@ -23,13 +23,10 @@ Antes de executar o projeto, é necessário ter instalado:
 
 ## Como instalar o projeto
 
-Após clonar o repositório, execute o comando abaixo para instalar as dependências:
+Após clonar o repositório, execute os comandos abaixo para instalar as dependências do projeto e os navegadores utilizados pelo Playwright:
 
 ```bash
 npm install
-```
-
-```bash
 npx playwright install
 ```
 
@@ -57,6 +54,19 @@ ou:
 
 ```bash
 npx playwright test tests/Cadastro.spec.js
+```
+## Extensão opcional no VS Code
+
+Também é possível utilizar a extensão oficial do Playwright no VS Code para facilitar a execução e depuração dos testes.
+
+### Como instalar
+
+1. Abra o VS Code
+2. Acesse a aba de extensões
+3. Pesquise por:
+
+```txt
+Playwright Test for VSCode
 ```
 
 ## Como visualizar o relatório dos testes
